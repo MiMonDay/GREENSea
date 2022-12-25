@@ -97,7 +97,7 @@ local args = {
 }
 
 game:GetService("Players").LocalPlayer.Character.Baller.LocalScript.RemoteEvent:FireServer(unpack(args))
-wait(0.3)
+wait(0.5)
 end
 else
 _G.skkll = false
@@ -147,7 +147,23 @@ wait(0.5)
 --Đảo cây khủng lồ Boss
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1949.309814453125, -0.6514556407928467, -2544.184814453125)
 wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1722.94140625, 19.50814437866211, -1855.5135498046875)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1673.3170166015625, 19.505020141601562, -2009.5128173828125)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2027.416015625, 19.50925064086914, -1811.814697265625)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2120.91162109375, 19.50466537475586, -1940.542724609375)
+wait(0.5)
 --Đảo Miner Boss
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2951.95068359375, 19.508991241455078, 899.3889770507812)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3071.569091796875, 20.087919235229492, 931.8796997070312)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2975.054931640625, 19.505878448486328, 799.7975463867188)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2884.093505859375, 19.509300231933594, 733.2554931640625)
+wait(0.5)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3357.47412109375, 19.511808395385742, 650.9866943359375)
 wait(1)
 end
