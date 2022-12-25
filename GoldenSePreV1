@@ -1,0 +1,160 @@
+local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/cypherdh/VanisUILIB/main/.gitignore'))()
+
+local Window = library:CreateWindow("Golden-Sea", "Phiên bản V1", 10044538000)
+
+local Tab = Window:CreateTab("Chức năng")
+
+
+local Farm = Tab:CreateFrame("Farm")
+local Tele = Tab:CreateFrame("Dịch chuyển đến đảo")
+local Anti = Tab:CreateFrame("Chống bị Kick")
+
+Button = Tele:CreateButton("Đảo khởi đầu", "Cày lv-1 đến lv-50", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-134.12911987304688, 3.149998426437378, 67.13433074951172)
+end)
+
+Button = Tele:CreateButton("Đảo Random Devil Fruit", "Reset Stats, Dual Katana, Xóa trái ác quỷ", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-32.26402282714844, 3.149998426437378, 957.1171875)
+end)
+
+Button = Tele:CreateButton("Đảo 2", "LV-50 Đến LV-150", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-134.12911987304688, 3.149998426437378, 67.13433074951172)
+end)
+
+Button = Tele:CreateButton("Đảo 3", "LV-150 Đến LV-200", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2685.6435546875, 3.149998426437378, 738.4459838867188)
+end)
+
+Button = Tele:CreateButton("Đảo 4", "LV-200 Đến LV-310", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4378.3994140625, 4.2375993728637695, -106.65087890625)
+end)
+
+Button = Tele:CreateButton("Đảo 5", "LV-310 Đến LV-400", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8499.5517578125, 3.149998426437378, -485.57135009765625)
+end)
+
+Button = Tele:CreateButton("Đảo 6", "LV-400 Đến LV-525", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-12581.4638671875, 3.149998426437378, -4318.8291015625)
+end)
+
+Button = Tele:CreateButton("Đảo 7", "LV-525 Đến LV-675", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-7468.28515625, -0.7293270826339722, -3894.997802734375)
+end)
+
+Button = Tele:CreateButton("Đảo 8", "Đảo Human Có 4 tượng, Mỗi tượng có 1 npc trên vai", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3318.649169921875, -0.7293270826339722, -2139.3603515625)
+end)
+
+Button = Tele:CreateButton("Đảo 9", "Đảo có Boss Tên Master LV-5000+", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4295.16064453125, 3.149998426437378, -3763.429443359375)
+end)
+
+Button = Tele:CreateButton("Đảo 10", "Đảo Đấu trường", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-207.56231689453125, 5.730472564697266, -2210.363037109375)
+end)
+
+Button = Tele:CreateButton("Đảo 11", "LV-675 Đến LV-850", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2821.705810546875, -4.747617244720459, 882.2420043945312)
+end)
+
+Button = Tele:CreateButton("Đảo 12", "LV-850 Đến LV-3000", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2138.197509765625, -4.745996952056885, -1697.666748046875)
+end)
+
+Button = Anti:CreateButton("Anti AFK", "Không bị kick ra server khi treo", function()
+CreateNotification("Title", "Description", function(value)
+if value == true then
+repeat
+    wait()
+until game:IsLoaded()
+wait()
+
+if getconnections then
+    for _, v in next, getconnections(game:GetService("Players").LocalPlayer.Idled) do
+        v:Disable()
+    end
+end
+
+if not getconnections then
+    game:GetService("Players").LocalPlayer.Idled:connect(
+        function()
+            game:GetService("VirtualUser"):ClickButton2(Vector2.new())
+        end
+    )
+    print("poopy exploit")
+end
+end
+end)
+end)
+
+Toggle = Farm:CreateToggle("Spamskill", "Cầm Fruit, Melee, Sword  Lên trước rồi bấm SpamSkill", function(v)
+Toggle:UpdateToggle("Spamskill", "Cầm Fruit, Melee, Sword  Lên trước rồi bấm SpamSkill")
+if v then
+_G.skill = true
+while _G.skill do
+local args = {
+    [1] = Vector3.new(-4318.6572265625, 21.656932830810547, -472.1080017089844)
+}
+
+game:GetService("Players").LocalPlayer.Character.Baller.LocalScript.RemoteEvent:FireServer(unpack(args))
+wait(0.3)
+end
+else
+_G.skkll = false
+end
+end)
+
+Toggle = Farm:CreateToggle("AutoFarm", "Chỉ TP quái farm nhiều Exp, Beli,Crystal ", function(v)
+Toggle:UpdateToggle("AutoFarm", "Chỉ TP quái farm nhiều Exp, Beli,Crysta")
+if v then
+_G.to = true
+while _G.to do
+--Đảo người cá
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-12718.7900390625, 3.149998426437378, -4663.9296875)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-12986.6796875, 3.149998426437378, -4592.12451171875)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-13060.6259765625, 3.149998426437378, -4748.34814453125)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-12839.1376953125, 3.1499993801116943, -4880.1416015625)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-13828.7744140625, 3.149998903274536, -4687.119140625)
+wait(0.5)
+--Đảo đầu lâu quái 1
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8772.7958984375, 3.149998903274536, -718.4514770507812)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8980.177734375, 3.1499993801116943, -852.1993408203125)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8517.9375, 3.149998426437378, -940.8792724609375)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8540.572265625, 3.149998903274536, -1145.0853271484375)
+wait(0.5)
+--Quái 2
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9289.3564453125, 4.029209136962891, 460.1390686035156)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9318.490234375, 3.149998664855957, 293.06201171875)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9243.2490234375, 3.3847529888153076, 114.99925994873047)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9095.865234375, 3.149998426437378, 92.49102020263672)
+wait(0.5)
+--Boss
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9106.9853515625, 3.149998664855957, -551.3834228515625)
+wait(0.5)
+--Đảo Master
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4382.3564453125, 3.149998426437378, -3895.183349609375)
+wait(0.5)
+--Đảo cây khủng lồ Boss
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1949.309814453125, -0.6514556407928467, -2544.184814453125)
+wait(0.5)
+--Đảo Miner Boss
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3357.47412109375, 19.511808395385742, 650.9866943359375)
+wait(1)
+end
+else
+_G.to = false
+end
+end)
+
+Label = Page:CreateLabel("Label")
+Label:UpdateLabel("Script Làm đơn giản của MiMonDay")
