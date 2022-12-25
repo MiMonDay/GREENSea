@@ -87,6 +87,14 @@ end
 end)
 end)
 
+Button = Farm:CreateButton("Lấy Baller", "Vũ khí Tối thượng", function()
+local args = {
+    [1] = "Baller"
+}
+
+game:GetService("Players").LocalPlayer.PlayerGui.Shop.Frame.Buyy:FireServer(unpack(args))
+end)
+
 Toggle = Farm:CreateToggle("Spamskill", "Cầm Fruit, Melee, Sword  Lên trước rồi bấm SpamSkill", function(v)
 Toggle:UpdateToggle("Spamskill", "Cầm Fruit, Melee, Sword  Lên trước rồi bấm SpamSkill")
 if v then
